@@ -14,6 +14,9 @@
 		F274E27927C14F5600D3B959 /* UGAHACKS7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E27827C14F5600D3B959 /* UGAHACKS7Tests.swift */; };
 		F274E28327C14F5600D3B959 /* UGAHACKS7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E28227C14F5600D3B959 /* UGAHACKS7UITests.swift */; };
 		F274E28527C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E28427C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift */; };
+		F274E29427C15FF800D3B959 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E29327C15FF800D3B959 /* Card.swift */; };
+		F274E29827C1617100D3B959 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E29727C1617100D3B959 /* CardView.swift */; };
+		F274E29A27C162E500D3B959 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E29927C162E500D3B959 /* Wallet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		F274E27E27C14F5600D3B959 /* UGAHACKS7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGAHACKS7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F274E28227C14F5600D3B959 /* UGAHACKS7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7UITests.swift; sourceTree = "<group>"; };
 		F274E28427C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F274E29327C15FF800D3B959 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F274E29727C1617100D3B959 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F274E29927C162E500D3B959 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 				F274E26727C14F5500D3B959 /* UGAHACKS7App.swift */,
 				F274E26927C14F5500D3B959 /* ContentView.swift */,
 				F274E26B27C14F5600D3B959 /* Assets.xcassets */,
+				F274E29727C1617100D3B959 /* CardView.swift */,
+				F274E29327C15FF800D3B959 /* Card.swift */,
+				F274E29927C162E500D3B959 /* Wallet.swift */,
 				F274E26D27C14F5600D3B959 /* Preview Content */,
 			);
 			path = UGAHACKS7;
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F274E29A27C162E500D3B959 /* Wallet.swift in Sources */,
 				F274E26A27C14F5500D3B959 /* ContentView.swift in Sources */,
+				F274E29427C15FF800D3B959 /* Card.swift in Sources */,
+				F274E29827C1617100D3B959 /* CardView.swift in Sources */,
 				F274E26827C14F5500D3B959 /* UGAHACKS7App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

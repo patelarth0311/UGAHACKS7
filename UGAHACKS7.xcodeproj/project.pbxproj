@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F274E26827C14F5500D3B959 /* UGAHACKS7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E26727C14F5500D3B959 /* UGAHACKS7App.swift */; };
+		F274E26A27C14F5500D3B959 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E26927C14F5500D3B959 /* ContentView.swift */; };
+		F274E26C27C14F5600D3B959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F274E26B27C14F5600D3B959 /* Assets.xcassets */; };
+		F274E26F27C14F5600D3B959 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F274E26E27C14F5600D3B959 /* Preview Assets.xcassets */; };
+		F274E27927C14F5600D3B959 /* UGAHACKS7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E27827C14F5600D3B959 /* UGAHACKS7Tests.swift */; };
+		F274E28327C14F5600D3B959 /* UGAHACKS7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E28227C14F5600D3B959 /* UGAHACKS7UITests.swift */; };
+		F274E28527C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E28427C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F274E27527C14F5600D3B959 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F274E25C27C14F5400D3B959 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F274E26327C14F5500D3B959;
+			remoteInfo = UGAHACKS7;
+		};
+		F274E27F27C14F5600D3B959 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F274E25C27C14F5400D3B959 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F274E26327C14F5500D3B959;
+			remoteInfo = UGAHACKS7;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F274E26427C14F5500D3B959 /* UGAHACKS7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGAHACKS7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F274E26727C14F5500D3B959 /* UGAHACKS7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7App.swift; sourceTree = "<group>"; };
+		F274E26927C14F5500D3B959 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F274E26B27C14F5600D3B959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F274E26E27C14F5600D3B959 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F274E27427C14F5600D3B959 /* UGAHACKS7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGAHACKS7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F274E27827C14F5600D3B959 /* UGAHACKS7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7Tests.swift; sourceTree = "<group>"; };
+		F274E27E27C14F5600D3B959 /* UGAHACKS7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGAHACKS7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F274E28227C14F5600D3B959 /* UGAHACKS7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7UITests.swift; sourceTree = "<group>"; };
+		F274E28427C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGAHACKS7UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F274E26127C14F5500D3B959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27127C14F5600D3B959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27B27C14F5600D3B959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F274E25B27C14F5400D3B959 = {
+			isa = PBXGroup;
+			children = (
+				F274E26627C14F5500D3B959 /* UGAHACKS7 */,
+				F274E27727C14F5600D3B959 /* UGAHACKS7Tests */,
+				F274E28127C14F5600D3B959 /* UGAHACKS7UITests */,
+				F274E26527C14F5500D3B959 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F274E26527C14F5500D3B959 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F274E26427C14F5500D3B959 /* UGAHACKS7.app */,
+				F274E27427C14F5600D3B959 /* UGAHACKS7Tests.xctest */,
+				F274E27E27C14F5600D3B959 /* UGAHACKS7UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F274E26627C14F5500D3B959 /* UGAHACKS7 */ = {
+			isa = PBXGroup;
+			children = (
+				F274E26727C14F5500D3B959 /* UGAHACKS7App.swift */,
+				F274E26927C14F5500D3B959 /* ContentView.swift */,
+				F274E26B27C14F5600D3B959 /* Assets.xcassets */,
+				F274E26D27C14F5600D3B959 /* Preview Content */,
+			);
+			path = UGAHACKS7;
+			sourceTree = "<group>";
+		};
+		F274E26D27C14F5600D3B959 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F274E26E27C14F5600D3B959 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F274E27727C14F5600D3B959 /* UGAHACKS7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F274E27827C14F5600D3B959 /* UGAHACKS7Tests.swift */,
+			);
+			path = UGAHACKS7Tests;
+			sourceTree = "<group>";
+		};
+		F274E28127C14F5600D3B959 /* UGAHACKS7UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F274E28227C14F5600D3B959 /* UGAHACKS7UITests.swift */,
+				F274E28427C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift */,
+			);
+			path = UGAHACKS7UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F274E26327C14F5500D3B959 /* UGAHACKS7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F274E28827C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7" */;
+			buildPhases = (
+				F274E26027C14F5500D3B959 /* Sources */,
+				F274E26127C14F5500D3B959 /* Frameworks */,
+				F274E26227C14F5500D3B959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UGAHACKS7;
+			productName = UGAHACKS7;
+			productReference = F274E26427C14F5500D3B959 /* UGAHACKS7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F274E27327C14F5600D3B959 /* UGAHACKS7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F274E28B27C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7Tests" */;
+			buildPhases = (
+				F274E27027C14F5600D3B959 /* Sources */,
+				F274E27127C14F5600D3B959 /* Frameworks */,
+				F274E27227C14F5600D3B959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F274E27627C14F5600D3B959 /* PBXTargetDependency */,
+			);
+			name = UGAHACKS7Tests;
+			productName = UGAHACKS7Tests;
+			productReference = F274E27427C14F5600D3B959 /* UGAHACKS7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F274E27D27C14F5600D3B959 /* UGAHACKS7UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F274E28E27C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7UITests" */;
+			buildPhases = (
+				F274E27A27C14F5600D3B959 /* Sources */,
+				F274E27B27C14F5600D3B959 /* Frameworks */,
+				F274E27C27C14F5600D3B959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F274E28027C14F5600D3B959 /* PBXTargetDependency */,
+			);
+			name = UGAHACKS7UITests;
+			productName = UGAHACKS7UITests;
+			productReference = F274E27E27C14F5600D3B959 /* UGAHACKS7UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F274E25C27C14F5400D3B959 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F274E26327C14F5500D3B959 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F274E27327C14F5600D3B959 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F274E26327C14F5500D3B959;
+					};
+					F274E27D27C14F5600D3B959 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F274E26327C14F5500D3B959;
+					};
+				};
+			};
+			buildConfigurationList = F274E25F27C14F5400D3B959 /* Build configuration list for PBXProject "UGAHACKS7" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F274E25B27C14F5400D3B959;
+			productRefGroup = F274E26527C14F5500D3B959 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F274E26327C14F5500D3B959 /* UGAHACKS7 */,
+				F274E27327C14F5600D3B959 /* UGAHACKS7Tests */,
+				F274E27D27C14F5600D3B959 /* UGAHACKS7UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F274E26227C14F5500D3B959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F274E26F27C14F5600D3B959 /* Preview Assets.xcassets in Resources */,
+				F274E26C27C14F5600D3B959 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27227C14F5600D3B959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27C27C14F5600D3B959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F274E26027C14F5500D3B959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F274E26A27C14F5500D3B959 /* ContentView.swift in Sources */,
+				F274E26827C14F5500D3B959 /* UGAHACKS7App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27027C14F5600D3B959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F274E27927C14F5600D3B959 /* UGAHACKS7Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F274E27A27C14F5600D3B959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F274E28327C14F5600D3B959 /* UGAHACKS7UITests.swift in Sources */,
+				F274E28527C14F5600D3B959 /* UGAHACKS7UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F274E27627C14F5600D3B959 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F274E26327C14F5500D3B959 /* UGAHACKS7 */;
+			targetProxy = F274E27527C14F5600D3B959 /* PBXContainerItemProxy */;
+		};
+		F274E28027C14F5600D3B959 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F274E26327C14F5500D3B959 /* UGAHACKS7 */;
+			targetProxy = F274E27F27C14F5600D3B959 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F274E28627C14F5600D3B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F274E28727C14F5600D3B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F274E28927C14F5600D3B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UGAHACKS7/Preview Content\"";
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F274E28A27C14F5600D3B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UGAHACKS7/Preview Content\"";
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F274E28C27C14F5600D3B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UGAHACKS7.app/UGAHACKS7";
+			};
+			name = Debug;
+		};
+		F274E28D27C14F5600D3B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UGAHACKS7.app/UGAHACKS7";
+			};
+			name = Release;
+		};
+		F274E28F27C14F5600D3B959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UGAHACKS7;
+			};
+			name = Debug;
+		};
+		F274E29027C14F5600D3B959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25FTLXXJD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Me.UGAHACKS7UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UGAHACKS7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F274E25F27C14F5400D3B959 /* Build configuration list for PBXProject "UGAHACKS7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F274E28627C14F5600D3B959 /* Debug */,
+				F274E28727C14F5600D3B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F274E28827C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F274E28927C14F5600D3B959 /* Debug */,
+				F274E28A27C14F5600D3B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F274E28B27C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F274E28C27C14F5600D3B959 /* Debug */,
+				F274E28D27C14F5600D3B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F274E28E27C14F5600D3B959 /* Build configuration list for PBXNativeTarget "UGAHACKS7UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F274E28F27C14F5600D3B959 /* Debug */,
+				F274E29027C14F5600D3B959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F274E25C27C14F5400D3B959 /* Project object */;
+}

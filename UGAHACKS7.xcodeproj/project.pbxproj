@@ -19,6 +19,7 @@
 		F274E29A27C162E500D3B959 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E29927C162E500D3B959 /* Wallet.swift */; };
 		F274E29C27C1A59000D3B959 /* QrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E29B27C1A59000D3B959 /* QrCode.swift */; };
 		F274E2A427C1B47900D3B959 /* CreateNewWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F274E2A327C1B47900D3B959 /* CreateNewWallet.swift */; };
+		F2DD11CF27C24ABF0092C7F1 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DD11CE27C24ABF0092C7F1 /* CoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		F274E29927C162E500D3B959 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		F274E29B27C1A59000D3B959 /* QrCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCode.swift; sourceTree = "<group>"; };
 		F274E2A327C1B47900D3B959 /* CreateNewWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWallet.swift; sourceTree = "<group>"; };
+		F2DD11CE27C24ABF0092C7F1 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F274E26B27C14F5600D3B959 /* Assets.xcassets */,
 				F274E29727C1617100D3B959 /* CardView.swift */,
 				F274E2A327C1B47900D3B959 /* CreateNewWallet.swift */,
+				F2DD11CE27C24ABF0092C7F1 /* CoinView.swift */,
 				F274E29327C15FF800D3B959 /* Card.swift */,
 				F274E29927C162E500D3B959 /* Wallet.swift */,
 				F274E26D27C14F5600D3B959 /* Preview Content */,
@@ -277,6 +280,7 @@
 				F274E29427C15FF800D3B959 /* Card.swift in Sources */,
 				F274E29C27C1A59000D3B959 /* QrCode.swift in Sources */,
 				F274E29827C1617100D3B959 /* CardView.swift in Sources */,
+				F2DD11CF27C24ABF0092C7F1 /* CoinView.swift in Sources */,
 				F274E26827C14F5500D3B959 /* UGAHACKS7App.swift in Sources */,
 				F274E2A427C1B47900D3B959 /* CreateNewWallet.swift in Sources */,
 			);

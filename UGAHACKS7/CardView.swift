@@ -11,7 +11,7 @@ struct CardView: View {
     
     var card: Card
     
-  
+    
     
     var body: some View {
       

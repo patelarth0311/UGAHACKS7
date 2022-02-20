@@ -15,12 +15,16 @@ struct Wallet: View {
     private static let cardOffset: CGFloat = 40.0
     @State private var isCardPressed = false;
     @GestureState private var dragState = DragState.inactive
-   
+
+    @State private var willMoveToNextScreen = false;
+    
+    @State private var submitState = false;
+  
     var body: some View {
         
         
         VStack {
-            TopNavBar()
+            TopNavBar(willMoveToNextScreen: $willMoveToNextScreen, submitState: $submitState)
             
             Spacer()
             
@@ -217,6 +221,10 @@ struct Wallet: View {
 
 struct TopNavBar: View {
     
+    @Binding var willMoveToNextScreen : Bool
+    
+    @Binding var submitState: Bool
+    
     var body : some View {
         HStack {
             Text("Wallet")
@@ -227,17 +235,27 @@ struct TopNavBar: View {
             
             Button {
                 
+                willMoveToNextScreen.toggle()
+                
             } label : {
                 Image(systemName: "plus.circle.fill")
-                    .font(.system(.title))
+                    .font(.system(size: 30))
+                    
             }
         }
+        .fullScreenCover(isPresented: $willMoveToNextScreen) {
+            CreateNewWallet(willMoveToNextScreen: $willMoveToNextScreen,  submitState: $submitState)
+        }
+        
         .padding(.horizontal)
         .padding(.top,20)
         
     }
     
 }
+
+
+
 
 
 enum DragState {
@@ -284,3 +302,5 @@ enum DragState {
     
     
 }
+
+

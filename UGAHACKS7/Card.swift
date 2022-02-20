@@ -19,6 +19,7 @@ struct Card: Identifiable {
     var type: CardType
     var number: String
     var expiryDate: String
+   
     var image: String {
         return type.rawValue
     }

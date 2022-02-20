@@ -39,12 +39,8 @@ struct Wallet: View {
                     
                     ForEach(cards) { card in
                         
-                        CardView(card: card)
-                            .overlay(
-                                VStack {
-                                    QrCodeGenerator(address: $address)
-                                }
-                            )
+                        CardView(card: card, address: $address)
+                          
                             .padding(.horizontal,35)
                             .zIndex(self.zIndex(for: card))
                             .offset(self.offset(for: card))

@@ -40,7 +40,7 @@ struct CreateNewWallet: View {
 
           
             Text("Selected currency: \(selection)")
-                .font(.system(.caption , design: .rounded))
+                .font(.system(.callout, design: .rounded))
             
           
             
@@ -56,6 +56,7 @@ struct CreateNewWallet: View {
                 TextField("Address", text: $address)
                     .textCase(.none)
                     .foregroundColor(.white)
+                    
             }
                 .padding()
                  
@@ -63,7 +64,7 @@ struct CreateNewWallet: View {
             
             if (address.isEmpty == false && selection.isEmpty == false) {
             Capsule()
-                .fill(Color.blue)
+                .fill(Color("CustomGreen"))
                 
                 .frame(width: 100, height: 60)
                 
@@ -76,18 +77,19 @@ struct CreateNewWallet: View {
                 submitState = false;
                 willMoveToNextScreen.toggle()
                 
-                let newCard =  Card(address: address, cryptoName: selection)
+                let newCard =  Card(cryptoName: selection , type: selection, address: address)
                 
-                
+
                 
                 list.append(newCard)
-                print(list.count)
                 
+                address = "";
                 
                 
             } label : {
                 
               Text("Submit")
+                    .font(.system(.callout, design: .rounded))
                     .foregroundColor(.white)
             }
             )

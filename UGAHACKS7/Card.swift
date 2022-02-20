@@ -11,11 +11,11 @@ import SwiftUI
 
 
 
-
 struct Card: Identifiable {
     var id = UUID()
-    var address: String
     var cryptoName: String
+    var type: String 
+    var address: String
+  
 }
-
 

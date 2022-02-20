@@ -11,27 +11,41 @@ struct CardView: View {
     
     var card: Card
   
-    
+    @Binding var address: String 
     
     var body: some View {
       
-     /*   Image(card.image)
+        Image(card.type)
             .resizable()
+            .interpolation(.none)
             .scaledToFit()
-            .overlay(*/
-                VStack (alignment: .leading) {
-                Text(card.cryptoName)
-                    .bold()
+            .overlay(
                 HStack {
+                    Spacer()
+                VStack (alignment: .trailing) {
+                Text(card.cryptoName)
+                        .font(.system(.largeTitle))
+                            .fontWeight(.black)
+                      
+                    .padding(20)
+                    VStack {
+                   
+
+                            QrCodeGenerator(address: $address)
+                
                     Text(card.address)
                         .bold()
                 }
                 }
+                
+                }
+                    .padding(.trailing,30)
             
-                .foregroundColor(.red)
+                .foregroundColor(.white)
             .padding(.leading,25)
             .padding(.bottom, 20)
-      
+                , alignment: .bottomLeading)
+        
             
         
     

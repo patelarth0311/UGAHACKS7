@@ -35,9 +35,9 @@ struct CoinView: View {
             VStack(spacing : 80) {
                 HStack {
                     
-                    Image(logo)
+                    Image(logo+"1")
                         .resizable()
-                        .frame(width: 100, height: 50)
+                        .frame(width: 100, height: 100)
                                        
                     
                     Text(coinName)
@@ -53,7 +53,7 @@ struct CoinView: View {
                     .bold()
                     .foregroundColor(.white)
                     .font(.system(size:25))
-                    .shadow(color: .black, radius: 5)
+                    
     
                     
                 }

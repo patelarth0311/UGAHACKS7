@@ -10,32 +10,28 @@ import SwiftUI
 struct CardView: View {
     
     var card: Card
-    
+  
     
     
     var body: some View {
       
-        Image(card.image)
+     /*   Image(card.image)
             .resizable()
             .scaledToFit()
-            .overlay(
+            .overlay(*/
                 VStack (alignment: .leading) {
-                Text(card.number)
+                Text(card.cryptoName)
                     .bold()
                 HStack {
-                    Text(card.name)
+                    Text(card.address)
                         .bold()
-                    Text("Valid Thru")
-                        .font(.footnote)
-                    Text(card.expiryDate)
-                        .font(.footnote)
                 }
                 }
             
-            .foregroundColor(.white)
+                .foregroundColor(.red)
             .padding(.leading,25)
             .padding(.bottom, 20)
-                , alignment: .bottomLeading)
+      
             
         
     

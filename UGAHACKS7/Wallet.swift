@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Wallet: View {
     
-    @State var cards: [Card] = testCards
+    @State var cards: [Card] = [Card]()
+  
     @State private var isCardPresent = false;
     @State var selectedCard: Card?
     private static let cardOffset: CGFloat = 40.0
@@ -19,20 +20,31 @@ struct Wallet: View {
     @State private var willMoveToNextScreen = false;
     
     @State private var submitState = false;
+    
+    @State private var address = ""
+    
   
     var body: some View {
         
         
         VStack {
-            TopNavBar(willMoveToNextScreen: $willMoveToNextScreen, submitState: $submitState)
+            TopNavBar(willMoveToNextScreen: $willMoveToNextScreen, submitState: $submitState, list: $cards, address: $address)
             
             Spacer()
             
             
             ZStack {
                 if isCardPresent {
+                    
+                    
                     ForEach(cards) { card in
+                        
                         CardView(card: card)
+                            .overlay(
+                                VStack {
+                                    QrCodeGenerator(address: $address)
+                                }
+                            )
                             .padding(.horizontal,35)
                             .zIndex(self.zIndex(for: card))
                             .offset(self.offset(for: card))
@@ -225,6 +237,11 @@ struct TopNavBar: View {
     
     @Binding var submitState: Bool
     
+    @Binding var list: [Card]
+    
+    
+    @Binding var address : String
+    
     var body : some View {
         HStack {
             Text("Wallet")
@@ -239,12 +256,13 @@ struct TopNavBar: View {
                 
             } label : {
                 Image(systemName: "plus.circle.fill")
+                    .foregroundColor(Color("CustomGreen"))
                     .font(.system(size: 30))
                     
             }
         }
         .fullScreenCover(isPresented: $willMoveToNextScreen) {
-            CreateNewWallet(willMoveToNextScreen: $willMoveToNextScreen,  submitState: $submitState)
+            CreateNewWallet(address: $address, willMoveToNextScreen: $willMoveToNextScreen,  submitState: $submitState, list: $list)
         }
         
         .padding(.horizontal)

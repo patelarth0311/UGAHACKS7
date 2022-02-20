@@ -9,14 +9,17 @@ import SwiftUI
 
 struct CreateNewWallet: View {
     
-    @State private var address: String = ""
+    @Binding var address: String 
     
     @State private var selection = ""
     
     @Binding  var willMoveToNextScreen: Bool
     @Binding  var  submitState : Bool
     
-    let options = ["Bitcoin", "Ethereum","Doge", "Cardano"]
+    @Binding var list: [Card]
+    
+    
+    let options = ["Bitcoin", "Ethereum","Doge", "Bitcoin Cash"]
     var body: some View {
         
         ZStack {
@@ -25,20 +28,24 @@ struct CreateNewWallet: View {
             Picker("Select a Cryptocurrency", selection: $selection) {
                 ForEach(options, id: \.self) {
                     Text($0)
+                       
+                     
                       
                 }
             }
+            
           
             .pickerStyle(.segmented)
             
 
           
             Text("Selected currency: \(selection)")
+                .font(.system(.caption , design: .rounded))
             
           
             
             Capsule()
-                .fill(Color.blue)
+                .fill(Color("CustomGreen"))
                  .frame(width: 300, height: 60)
                 
                 .overlay(
@@ -47,13 +54,14 @@ struct CreateNewWallet: View {
             
          
                 TextField("Address", text: $address)
-                    .foregroundColor(.black)
+                    .textCase(.none)
+                    .foregroundColor(.white)
             }
                 .padding()
                  
             )
             
-            if (address.isEmpty == false) {
+            if (address.isEmpty == false && selection.isEmpty == false) {
             Capsule()
                 .fill(Color.blue)
                 
@@ -63,8 +71,19 @@ struct CreateNewWallet: View {
                     
             Button {
                 
+                
+                
                 submitState = false;
                 willMoveToNextScreen.toggle()
+                
+                let newCard =  Card(address: address, cryptoName: selection)
+                
+                
+                
+                list.append(newCard)
+                print(list.count)
+                
+                
                 
             } label : {
                 
@@ -75,10 +94,6 @@ struct CreateNewWallet: View {
     
             }
            
-             
-                QrCodeGenerator(address: $address)
-            
-                
             
          
             Spacer()
@@ -97,6 +112,7 @@ struct CreateNewWallet: View {
                 VStack (alignment: .center) {
                     
                     Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(Color("CustomGreen"))
                         .font(.system(size: 30))
                 }
                 

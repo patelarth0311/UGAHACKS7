@@ -23,7 +23,7 @@ struct Wallet: View {
     
     @State private var address = ""
     
-  
+    @State private var closeScreen = false;
     var body: some View {
         
         
@@ -41,7 +41,7 @@ struct Wallet: View {
                     ForEach(cards) { card in
                         
                         CardView(card: card, address: $address)
-                          
+                            
                             .padding(.horizontal,35)
                             .zIndex(self.zIndex(for: card))
                             .offset(self.offset(for: card))
@@ -49,10 +49,13 @@ struct Wallet: View {
                             .animation(self.transitionAnimation(for: card), value: false)
                             .gesture(
                                 TapGesture()
+                                
+                                
                                     .onEnded({ _ in
                                         
                                         withAnimation(.easeOut(duration: 0.15).delay(0.1)) {
                                             self.isCardPressed.toggle()
+                                            self.closeScreen.toggle()
                                             self.selectedCard = self.isCardPressed ? card : nil
                                         }
                                     })
@@ -79,6 +82,10 @@ struct Wallet: View {
                                                     })
                                                 )
                             )
+                            .fullScreenCover(isPresented: $closeScreen) {
+                                CoinView(logo: card.type, coinName: card.cryptoName, colorScheme: .gray, closeScreen: $closeScreen)
+                            }
+                          
                         
                        
                         
@@ -97,9 +104,7 @@ struct Wallet: View {
             
             
         }
-        .fullScreenCover(isPresented: $isCardPressed) {
-            CoinView(logo: "bitcoinlogo", coinName: "Bitcoin", colorScheme: .orange)
-        }
+        
     }
     
     

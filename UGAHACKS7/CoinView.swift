@@ -1,13 +1,14 @@
 
 //  CoinView.swift
-//  NCRWallet
+//
 //
 //  Created by Matthew Gayle on 2/19/22.
 //
 
 
 import SwiftUI
-/* URL https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=true&price_change_percentage=24h
+import Foundation
+/* URL https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2C%20dogecoin%2C%20ethereum%2C%20bitcoin-cash&order=market_cap_desc&per_page=100&page=1&sparkline=false
  */
 
 struct CoinView: View {
@@ -15,6 +16,8 @@ struct CoinView: View {
     let logo: String
     let coinName: String
     let colorScheme: Color
+    
+    @Binding  var closeScreen: Bool
     
     @ObservedObject var coinInfo = GetData()
     //let coin: CoinModel
@@ -81,13 +84,64 @@ struct CoinView: View {
                 }
                
             } // VStack
+            
+            Button {
+                
+                closeScreen.toggle()
+                
+                
+                
+            } label: {
+                VStack (alignment: .center) {
+                    
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(Color("CustomGreen"))
+                        .font(.system(size: 30))
+                }
+                
+                
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+            .padding()
+            
         }// ZSTACK
-        
+  
         
     }
 }
 
+struct Coin : Identifiable, Codable {
 
+
+        let id, symbol, name: String
+        let image: String
+        let currentPrice: Double
+    let currentHoldings: Double?
+  
+
+    // MARK: - Roi
+    struct Roi {
+        let times: Double?
+        let currency: String?
+        let percentage: Double?
+    }
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case id, symbol, name, image
+        case currentPrice = "current_price"
+        case currentHoldings
+    }
+    
+    func updateHolding(amount: Double) -> Coin {
+      return Coin(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, currentHoldings: currentHoldings)
+    }
+    
+    var currentHoldingsValue : Double {
+        return (currentHoldings ?? 0) * currentPrice
+    }
+
+}
 
 
 
@@ -114,6 +168,10 @@ struct MakeButtons: View {
         }
     }
 }
+
+
+
+
 
 
 
@@ -169,3 +227,7 @@ struct DataLayout: Codable, Identifiable {
 }
 
 
+extension PreviewProvider {
+    
+    
+}

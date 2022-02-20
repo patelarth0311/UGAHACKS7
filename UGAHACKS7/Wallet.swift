@@ -28,6 +28,7 @@ struct Wallet: View {
         
         
         VStack {
+            
             TopNavBar(willMoveToNextScreen: $willMoveToNextScreen, submitState: $submitState, list: $cards, address: $address)
             
             Spacer()
@@ -79,6 +80,7 @@ struct Wallet: View {
                                                 )
                             )
                         
+                       
                         
                         
                         
@@ -90,9 +92,13 @@ struct Wallet: View {
             .onAppear {
                 isCardPresent.toggle()
             }
+           
             Spacer()
             
             
+        }
+        .fullScreenCover(isPresented: $isCardPressed) {
+            CoinView(logo: "bitcoinlogo", coinName: "Bitcoin", colorScheme: .orange)
         }
     }
     
@@ -143,8 +149,10 @@ struct Wallet: View {
         }
         
         if isCardPressed {
+         
             guard let selectedCard = self.selectedCard,
                   let selectedCardIndex = index(for: selectedCard) else {
+                      
                       return .zero
                   }
             

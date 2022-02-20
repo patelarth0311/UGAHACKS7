@@ -24,11 +24,6 @@ struct CoinView: View {
     var body: some View {
         
         
-        List(coinInfo.coins) {
-            coin in
-                Text("\(coin.currentPrice) and \(coin.id)" )
-        }
-         
         
         ZStack {
             colorScheme
@@ -68,8 +63,7 @@ struct CoinView: View {
                     .shadow(color: .black, radius: 5)
                  */
                 
-                Spacer()
-                    .frame(height:20)
+             
                     
                 
                 
@@ -85,7 +79,7 @@ struct CoinView: View {
                     
                 }
                 }
-                //Text ("Powered by NCR Solutions")
+               
             } // VStack
         }// ZSTACK
         

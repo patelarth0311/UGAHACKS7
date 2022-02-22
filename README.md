@@ -13,6 +13,6 @@ Users have the option to enter their physical addresses with the associated cryp
 <p align="center">
 <img  src = "https://user-images.githubusercontent.com/82795337/155186647-24aedfb0-a1b0-4842-9286-51ada513acdc.png" width = "642" height = "1389"> 
 </p>
-T
+
 
 Upon submitting the desired physical address, a creditcard graphic is generated that contains that QR code with the associated cryptocurrency's name above it and the readable physical address below.

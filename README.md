@@ -11,8 +11,9 @@ An iOS application that enables users to store their crypto physical addresses i
 Users have the option to enter their physical addresses with the associated cryptocurrency that will be embedded within a generated QR code.
 
 <p align="center">
-<img  src = "https://user-images.githubusercontent.com/82795337/155186647-24aedfb0-a1b0-4842-9286-51ada513acdc.png" width = "642" height = "1389"> 
+<img  src = "https://user-images.githubusercontent.com/82795337/155452158-c0d3646e-63f6-4df8-9384-d6850283ed90.png" width = "642" height = "1389"> 
 </p>
 
 
 Upon submitting the desired physical address, a creditcard graphic is generated that contains that QR code with the associated cryptocurrency's name above it and the readable physical address below.
+

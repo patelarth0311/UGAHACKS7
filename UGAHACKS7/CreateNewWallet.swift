@@ -19,7 +19,7 @@ struct CreateNewWallet: View {
     @Binding var list: [Card]
     
     
-    let options = ["Bitcoin", "Ethereum","Doge", "Bitcoin Cash"]
+    let options = ["Bitcoin", "Ethereum","Dogecoin", "Cardano"]
     var body: some View {
         
         ZStack {
@@ -40,7 +40,7 @@ struct CreateNewWallet: View {
 
           
             Text("Selected currency: \(selection)")
-                .font(.system(.callout, design: .rounded))
+                .font(.system(size: 20, weight: .semibold, design: .default))
             
           
             
@@ -89,7 +89,8 @@ struct CreateNewWallet: View {
             } label : {
                 
               Text("Submit")
-                    .font(.system(.callout, design: .rounded))
+                    .fontWeight(.semibold)
+                    .font(.system(.callout, design: .default))
                     .foregroundColor(.white)
             }
             )

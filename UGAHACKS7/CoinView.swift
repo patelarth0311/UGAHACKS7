@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Foundation
+import Combine
 /* URL https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2C%20dogecoin%2C%20ethereum%2C%20bitcoin-cash&order=market_cap_desc&per_page=100&page=1&sparkline=false
  */
 
@@ -16,10 +17,11 @@ struct CoinView: View {
     let logo: String
     let coinName: String
     let colorScheme: Color
+    let coins : [DataLayout]
+    
     
     @Binding  var closeScreen: Bool
     
-    @ObservedObject var coinInfo = GetData()
     //let coin: CoinModel
     
     
@@ -32,40 +34,63 @@ struct CoinView: View {
             colorScheme
                 .ignoresSafeArea()
                 
+          
+            
+            
+            
             VStack(spacing : 80) {
-                HStack {
-                    
-                    Image(logo+"1")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                                       
-                    
-                    Text(coinName)
-                        .fontWeight(.bold)
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                                       
-                    
-                        .padding()
-                } // HSTACK
                 VStack {
-                Text("CURRENT PRICE:")
-                    .bold()
-                    .foregroundColor(.white)
-                    .font(.system(size:25))
-                    
-    
-                    
-                }
-//                Text("\(coin.currentPrice)")
-                /*
-                    Text("Hello")
-                    .foregroundColor(.white)
-                    .font(.system(size:25))
-                    .bold()
-                    .shadow(color: .black, radius: 5)
-                 */
+                    ForEach(coins) { item in
+                        
+                        if (item.name == coinName) {
+                            
+                            HStack {
+                            AsyncImage(url: URL(string: "\(item.image)"),
+                                       content: { image in
+                                       image
+                                         .resizable()
+                                         .aspectRatio(contentMode: .fit)
+                                     }, placeholder: {
+                                       Color.gray
+                                     }
+
+                            )
+                                .frame(width: 70, height: 70)
+                               
+                           
+                          
+                                
+                                               
+                            
+                            Text(item.name)
+                                .fontWeight(.bold)
+                                .font(.largeTitle)
+                               
+                                               
+                            
+                                .padding()
+                            }
+                            .foregroundColor(.black)
+                            
+                            VStack {
+                              
+                                Text("Price: $\(item.current_price, specifier: "%.2f")")
+                                .bold()
+                            
+                                .font(.system(size:25))
+                                
                 
+                                
+                            }
+                            .foregroundColor(.black)
+                        } // HSTACK
+                     
+                        }
+                    
+                        
+                    }
+                
+
              
                     
                 
@@ -110,38 +135,8 @@ struct CoinView: View {
     }
 }
 
-struct Coin : Identifiable, Codable {
 
 
-        let id, symbol, name: String
-        let image: String
-        let currentPrice: Double
-    let currentHoldings: Double?
-  
-
-    // MARK: - Roi
-    struct Roi {
-        let times: Double?
-        let currency: String?
-        let percentage: Double?
-    }
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case id, symbol, name, image
-        case currentPrice = "current_price"
-        case currentHoldings
-    }
-    
-    func updateHolding(amount: Double) -> Coin {
-      return Coin(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, currentHoldings: currentHoldings)
-    }
-    
-    var currentHoldingsValue : Double {
-        return (currentHoldings ?? 0) * currentPrice
-    }
-
-}
 
 
 
@@ -153,15 +148,16 @@ struct MakeButtons: View {
         HStack {
             
             Button(action: {
-                print("BUTTON ONE")
+                
             }) {
                 Capsule()
+                    .fill(Color("CustomGreen"))
                     .frame(width:150,height:60)
                     .foregroundColor(.white)
                     .overlay(
                         Text(text)
                             .fontWeight(.bold)
-                            .font(.system(size: 25)))
+                            .font(.system(size: 20)))
                     .foregroundColor(color)
                 
             }
@@ -179,55 +175,3 @@ struct MakeButtons: View {
 
 
 
-public class GetData: ObservableObject {
-    @Published var coins = [DataLayout]()
-    init() {
-        
-        load()
-    }
-    
-    func load() {
-        let dataUrl = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false")!
-        
-        let decoder = JSONDecoder()
-        
-        URLSession.shared.dataTask(with: dataUrl) {(data,response,error) in
-            do {
-                if let d = data {
-                    let decodedLists = try decoder.decode([DataLayout].self, from: d)
-                    DispatchQueue.main.async {
-                        self.coins = decodedLists
-                    }
-                    
-                } else {
-                    print("No Data")
-                }
-                
-            } catch {
-                
-                print("error")
-            }
-            
-        } .resume()
-
-    }
-    
-}
-
-struct DataLayout: Codable, Identifiable {
-    public var id: String
-    public var currentPrice: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case currentPrice = "current_price"
-        
-    }
-    
-}
-
-
-extension PreviewProvider {
-    
-    
-}

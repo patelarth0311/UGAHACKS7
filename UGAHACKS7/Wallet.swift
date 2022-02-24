@@ -24,6 +24,8 @@ struct Wallet: View {
     @State private var address = ""
     
     @State private var closeScreen = false;
+    
+    @ObservedObject var coinInfo = GetData()
     var body: some View {
         
         
@@ -35,12 +37,19 @@ struct Wallet: View {
             
             
             ZStack {
+                
+             
+                    
+               
+                
+                
                 if isCardPresent {
                     
                     
                     ForEach(cards) { card in
                         
-                        CardView(card: card, address: $address)
+                        CardView(card: card, address: $address, isPresent: $isCardPressed, coinName: card.cryptoName.lowercased(),coins: coinInfo.coins)
+                            
                             
                             .padding(.horizontal,35)
                             .zIndex(self.zIndex(for: card))
@@ -54,8 +63,16 @@ struct Wallet: View {
                                     .onEnded({ _ in
                                         
                                         withAnimation(.easeOut(duration: 0.15).delay(0.1)) {
-                                            self.isCardPressed.toggle()
-                                            self.closeScreen.toggle()
+                                           
+                                            if isCardPressed {
+                                                self.closeScreen.toggle()
+                                            }
+                                            
+                                            
+                                                self.isCardPressed.toggle()
+                                            
+                                           
+                                           
                                             self.selectedCard = self.isCardPressed ? card : nil
                                         }
                                     })
@@ -83,7 +100,10 @@ struct Wallet: View {
                                                 )
                             )
                             .fullScreenCover(isPresented: $closeScreen) {
-                                CoinView(logo: card.type, coinName: card.cryptoName, colorScheme: .gray, closeScreen: $closeScreen)
+                               
+                                var card1 : Card = cards[self.index(for: card) ?? 0]
+                            
+                                CoinView(logo: card1.type, coinName: card1.cryptoName, colorScheme: .white, coins: coinInfo.coins, closeScreen: $closeScreen)
                             }
                           
                         
